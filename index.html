@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Guess the number</title>
+		<link rel="shortcut icon" href="./assets/img/favicon.jpg" type="image/x-icon" />
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<div class="pop-up">
+			<p class="message"></p>
+		</div>
+
+		<div class="header">
+			<img id="home" src="./assets/svg/home.svg" alt="Home Icon" height="80" width="100" />
+			<div class="sections">
+				<div class="section">Home</div>
+				<div class="section">Profile</div>
+				<div class="section">Ranking</div>
+			</div>
+			<img id="menu" src="./assets/svg/menu.svg" alt="Menu Icon" height="70" width="80" />
+		</div>
+
+		<div class="center">
+			<h1 id="title">Guess the number</h1>
+		</div>
+
+		<p class="rules">
+			Hi user, this is a simple game of guessing numbers. The game chooses randomly a number
+			between 1 and 100 (1 and 100 included) and you have to guess. You have only 10 attempts.
+			And in each attempt the game is going to tell you if the number is less or more than
+			your guess. The number will be revealed when you find it or your attempts are gone. Good
+			luck !
+		</p>
+
+		<div class="flexbox">
+			<p class="show-number">The number is : <span id="number"></span></p>
+			<p class="attempts">Attempts left : <span id="number-attempts">10</span></p>
+		</div>
+
+		<form>
+			<input type="text" id="guess" placeholder="What's the number ?" autocomplete="off" />
+		</form>
+
+		<div class="suggestions"></div>
+
+		<div class="container"></div>
+
+		<p class="help"></p>
+
+		<script src="./index.js"></script>
+	</body>
+</html>

@@ -1,0 +1,324 @@
+/* TODO: Ajout du responsive pour les sections (Home, Ranking...)*/
+
+@font-face {
+	font-family: main-font;
+	src: url(./assets/fonts/mainfont.ttf);
+}
+
+@font-face {
+	font-family: title-font;
+	src: url(./assets/fonts/titlefont.ttf);
+}
+
+:root {
+	--margin: 10px;
+	--color1: #ffebcd;
+	--color2: rgba(230, 159, 73, 0.5);
+	--color3: rgba(128, 128, 128, 0.3);
+	--color4: rgba(230, 131, 96, 0.2);
+}
+
+*,
+::before,
+::after {
+	font-family: main-font;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	position: relative;
+	background: var(--color1);
+	margin: 0;
+	padding: 0;
+}
+
+.pop-up {
+	position: absolute;
+	border: 2px solid black;
+	border-radius: 20px;
+	height: 150px;
+	width: 250px;
+	background: var(--color2);
+	opacity: 60%;
+	z-index: 1;
+	top: -50%;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	opacity: 0.9;
+}
+
+.show-pop-up {
+	animation: pop-up 8.9s ease-in-out;
+}
+
+@keyframes pop-up {
+	0% {
+		visibility: visible;
+		top: -40%;
+		transform: translate(-50%, 40%);
+	}
+	5% {
+		top: -30%;
+		transform: translate(-50%, 30%);
+	}
+	10% {
+		top: -20%;
+		transform: translate(-50%, 20%);
+	}
+	15% {
+		top: -10%;
+		transform: translate(-50%, 10%);
+	}
+	20% {
+		top: 0%;
+		transform: translate(-50%, 0%);
+	}
+	25% {
+		top: 10%;
+		transform: translate(-50%, -10%);
+	}
+	30% {
+		top: 20%;
+		transform: translate(-50%, -20%);
+	}
+	35% {
+		top: 30%;
+
+		transform: translate(-50%, -30%);
+	}
+	40% {
+		top: 40%;
+
+		transform: translate(-50%, -40%);
+	}
+	45% {
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	50% {
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	55% {
+		top: 40%;
+		transform: translate(-50%, -40%);
+	}
+	60% {
+		top: 30%;
+		transform: translate(-50%, -30%);
+	}
+	65% {
+		top: 20%;
+		transform: translate(-50%, -20%);
+	}
+	70% {
+		top: 10%;
+		transform: translate(-50%, -10%);
+	}
+	75% {
+		top: 0%;
+		transform: translate(-50%, 0%);
+	}
+	80% {
+		top: -10%;
+		transform: translate(-50%, 10%);
+	}
+	85% {
+		top: -20%;
+		transform: translate(-50%, 20%);
+	}
+	90% {
+		top: -30%;
+		transform: translate(-50%, 30%);
+	}
+	95% {
+		top: -40%;
+		transform: translate(-50%, 40%);
+	}
+	100% {
+		top: -50%;
+		transform: translate(-50%, 50%);
+	}
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: var(--color2);
+	margin: var(--margin);
+	border-radius: 15px;
+	height: 85px;
+}
+
+#home,
+#menu {
+	cursor: pointer;
+	margin: var(--margin);
+}
+
+.rotate {
+	transform: rotate(90deg);
+}
+
+.sections {
+	display: none;
+	height: 85px;
+	background: white;
+	width: 30%;
+	transform: translate(90%);
+	transition: 1s;
+}
+
+.section {
+	border: 1px solid black;
+	padding: 3px;
+	cursor: pointer;
+}
+
+.show-sections {
+	display: grid;
+}
+
+#title {
+	font-size: 1.5rem;
+	margin: var(--margin) 0;
+	padding: 0;
+	font-family: title-font;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.rules {
+	margin: var(--margin);
+	border: 1px solid black;
+	border-radius: 15px;
+	padding: 10px;
+}
+
+.flexbox {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.show-number,
+.attempts {
+	margin: var(--margin);
+}
+
+#number-attempts {
+	margin-right: var(--margin);
+}
+
+form,
+.container,
+.suggestions {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#guess,
+#new-game {
+	border: 2px solid var(--color3);
+	background: var(--color4);
+	text-align: center;
+	border-radius: 15px;
+	outline: none;
+	margin: var(--margin);
+	padding: 3px;
+}
+
+#guess {
+	height: 30px;
+	width: 150px;
+}
+
+#guess:focus {
+	border: 3px solid var(--color3);
+}
+
+.shaking {
+	animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+	0% {
+		transform: translateX(-5px);
+	}
+	50% {
+		transform: translateX(10px);
+	}
+	100% {
+		transform: translateX(-10px);
+	}
+}
+
+.suggestions {
+	margin: var(--margin);
+}
+
+#new-game {
+	height: 50px;
+	width: 100px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+#new-game:hover {
+	opacity: 0.8;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.help {
+	text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+	#title {
+		font-size: 1.5rem;
+	}
+	.rules {
+		font-size: 1.5rem;
+	}
+	.pop-up {
+		height: 200px;
+		width: 300px;
+	}
+	.message {
+		font-size: 1.2rem;
+	}
+}
+@media screen and (min-width: 1024px) {
+	#title,
+	.rules {
+		font-size: 2rem;
+	}
+	.message {
+		font-size: 1.2rem;
+	}
+	.show-number,
+	.attempts,
+	.help,
+	.suggestions {
+		font-size: 1.5rem;
+	}
+	#guess {
+		font-size: 1rem;
+		padding: 5px;
+	}
+	.rules {
+		margin: var(--margin) 3%;
+	}
+}

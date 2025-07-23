@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox="0 0 100 80">
+    <line x1="10" y1="35" x2="50" y2="5" stroke="black" stroke-width="2" />
+    <line x1="50" y1="5" x2="90" y2="35" stroke="black" stroke-width="2" />
+    <polygon points="10,40 10,70 40,70 40,50 60,50 60,70 90,70 90,40 50,10" fill="azure" />
+</svg>
